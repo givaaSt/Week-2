@@ -1,0 +1,31 @@
+*{
+    padding:0;
+    margin:0;
+}
+.Header{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    height:10vh;
+    width:100%;
+    background-color : #99A3A4;
+    font-weight:bold;
+
+}
+.Main{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.Sidebar{
+    height:90vh;
+    width:30%;
+    background-color :#ECF0F1;
+}
+.Animes{
+    height:90vh;
+    width:70%;
+    background-color :#616A6B;
+}
+

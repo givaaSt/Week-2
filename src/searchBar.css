@@ -1,0 +1,14 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+.SearchBar{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:5vh;
+    width:60%;
+    background-color:#D5DBDB;
+
+}
