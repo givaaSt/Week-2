@@ -9,6 +9,7 @@ function MainContent(props) {
 					className="search-box"
 					onSubmit={props.HandleSearch}>
 					<input 
+						className='pornhub'
 						type="search"
 						placeholder="Search for an anime..."
 						required
@@ -17,11 +18,13 @@ function MainContent(props) {
 				</form>
 			</div>
 			<div className="anime-list">
-				{props.animeList.map(anime => (
-					<AnimeCard
-						anime={anime}
-						key={anime.mal_id} />
-				))}
+				{!props.animeList.hasOwnProperty('data') ? <div>Haraal id gej anime chine alga </div> :
+					props.animeList.data.map(anime => (
+						<AnimeCard
+								anime={anime}
+								key={anime.mal_id} />
+						))
+					}
 			</div>
 		</main>
 	)

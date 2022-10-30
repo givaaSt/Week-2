@@ -1,7 +1,7 @@
 function Header() {
 	return (
 		<header>
-			<h1>The<strong>Anime</strong>Database</h1>
+			<h1>Week 2 task</h1>
 		</header>
 	)
 }
