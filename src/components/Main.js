@@ -9,7 +9,7 @@ function Anime() {
     const [animeList, SetAnimeList] = useState({});
 
     function searchResult(event) {
-        let APIstring = "https://api.jikan.moe/v4/anime?q=" + searchText + "&sfw";
+        let APIstring = `https://api.jikan.moe/v4/anime?q=${searchText}&sfw`;
 
         axios.get(APIstring).then(function (response) {
             console.log(response.data);
