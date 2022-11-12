@@ -39,7 +39,6 @@ function AnimeCard({ anime }) {
             <div className="card-misc-info">Scored {scoredBy}K</div>
           </div>
         </div>
-        <div className="card-misc-button"><a className="card-misc-a">Add to List</a></div>
       </div>
     </div>
   );

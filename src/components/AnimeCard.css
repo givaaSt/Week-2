@@ -112,7 +112,7 @@
     line-height: 22px;
     overflow: hidden;
     text-align: center;
-    width: 50%;
+
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -122,13 +122,9 @@
 .card-misc-info {
   font-weight: 700;
   width: 50%;
+
 }
 
-.card-misc-button {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
 
 .div {
   display: block;
