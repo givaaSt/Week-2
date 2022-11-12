@@ -1,14 +1,20 @@
 import React from "react";
 import "./AnimeCard.css";
 function AnimeCard({ anime }) {
+  const genres = anime.genres;
+  const listGenres = genres.map((e) =>
+    <li className="genre">{e.name}</li>
+  );
+  const scoredBy = anime.scored_by/1000
   return (
     <div className="card-container">
       <div className="card-title">{anime.title}</div>
-      <div className="card-info"> Oct 12, 2022 | 12 eps, 24 min </div>
+      <div className="card-info"> {anime.aired.prop.from.day}/{anime.aired.prop.from.month}/{anime.aired.prop.from.year} | {anime.episodes} eps, {anime.duration} </div>
       <div className="card-genre">
         <ul>
-          <li>Action</li>
-          <li>Supernatural</li>
+          {listGenres}
+          {/* <li>Action</li>
+          <li>Supernatural</li> */}
         </ul>
       </div>
       <div className="card-main">
@@ -16,20 +22,24 @@ function AnimeCard({ anime }) {
           <img src={anime.images.jpg.image_url} />
         </div>
         <div className="card-main-description">
-          Denji is robbed of a normal teenage life, left with nothing but his
-          deadbeat father's overwhelming debt. His only companion is his pet,
-          the chainsaw devil Pochita, with whom he slays devils for money that
-          inevitably ends up in the yakuza's pockets.
+          {anime.synopsis}
         </div>
       </div>
       <div className="card-misc">
-        <ul>
-          <li>8.90</li>
-          <li>786K</li>
+        {/* <ul>
+          <li>Rating {anime.score}</li>
+          <li>Scored {scoredBy}K</li>
           <li>
-            <button>Add to List</button>
+            <a>Add to List</a>
           </li>
-        </ul>
+        </ul> */}
+        <div className="card-misc-container">
+          <div className="card-misc-information">
+            <div className="card-misc-info">Rating {anime.score}</div>
+            <div className="card-misc-info">Scored {scoredBy}K</div>
+          </div>
+        </div>
+        <div className="card-misc-button"><a className="card-misc-a">Add to List</a></div>
       </div>
     </div>
   );
